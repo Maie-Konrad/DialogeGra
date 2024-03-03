@@ -1326,7 +1326,7 @@ GameObject:
   - component: {fileID: 1428447713}
   - component: {fileID: 1428447712}
   - component: {fileID: 1428447711}
-  - component: {fileID: 1428447710}
+  - component: {fileID: 1428447714}
   m_Layer: 5
   m_Name: StartButtom
   m_TagString: Untagged
@@ -1354,26 +1354,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1441, y: 899}
   m_SizeDelta: {x: 740.0807, y: 169.1031}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1428447710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428447708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06dccab31cbd62b4eadf997366f66474, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    Name: Maciek
-    description:
-    - Hej.. Jesten maciek
-    - "Wiedzia\u0142e\u015B \u017Ce kafelki maj\u0105 ostr\u0105 kraw\u0119d\u017A
-      ???"
-    - "A czy wiesz \u017Ce w r\u0119c\u0119 mam w\u0142a\u015Bnie tak\u0105 ^^"
-    - "Rozumiesz \u017Ce ostre rzeczy mog\u0105 zrobi\u0107 ci krzywd\u0119?"
 --- !u!114 &1428447711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1418,7 +1398,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1428447710}
+      - m_Target: {fileID: 1428447714}
         m_TargetAssemblyTypeName: DialogueTriggerSystem, Assembly-CSharp
         m_MethodName: TriggerDialogue
         m_Mode: 1
@@ -1468,6 +1448,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428447708}
   m_CullTransparentMesh: 1
+--- !u!114 &1428447714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428447708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06dccab31cbd62b4eadf997366f66474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1663651155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,6 +1528,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1836960326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1836960328}
+  - component: {fileID: 1836960327}
+  m_Layer: 5
+  m_Name: Dialogues
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1836960327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836960326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c9744db6c0f30d42a09eba586939219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    Name: ktos
+    description:
+    - ttt
+    - tttttt
+--- !u!224 &1836960328
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836960326}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1866768654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,6 +1753,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1866768655}
+  - {fileID: 1836960328}
   - {fileID: 528050546}
   - {fileID: 129134144}
   - {fileID: 1663651158}
