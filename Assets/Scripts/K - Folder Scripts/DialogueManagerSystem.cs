@@ -1,18 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueManagerSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI dialogText;
+    private Queue<string> dialogs;
+  
+
     void Start()
     {
-        
+        dialogs = new Queue<string>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StartDialog(Dialogue dialogue)
     {
-        
+
+        nameText.text = dialogue.Name;
+
+        dialogs.Clear();
+
+        foreach (string description in dialogue.description)
+        {
+            dialogs.Enqueue(description);
+        }
+
+
+        DisPlayDialogue();
+
+
+    }
+    public void DisPlayDialogue()
+    {
+        if (dialogs.Count == 0)
+        {
+            EndDialogue();
+            return;
+        }
+        string dialog = dialogs.Dequeue();
+        dialogText.text = dialog;
+    }
+    void EndDialogue()
+    {
+
+
     }
 }
